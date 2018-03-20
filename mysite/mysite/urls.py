@@ -17,10 +17,11 @@ from django.contrib import admin
 from django.urls import path,include
 from django.conf.urls import url
 #import view func from trips app (hello_world)
-from trips.views import hello_world
+from trips.views import hello_world,post_list
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url(r'^hello/$',hello_world),
+    url(r'^post_list/$',post_list),
     url(r'^admin/',admin.site.urls), #admin.site.urls 直接放進url的參數就好
 ]
